@@ -23,12 +23,10 @@ class CheckListViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
         
-        if let label = cell.viewWithTag(10) as? UILabel {
-            if indexPath.row == 0 {
-                label.text = "Run"
-            } else {
-                label.text = "Sleep"
-            }
+        if indexPath.row == 0 {
+            cell.textLabel?.text = "Run"
+        } else {
+            cell.textLabel?.text = "Sleep"
         }
         
         return cell
