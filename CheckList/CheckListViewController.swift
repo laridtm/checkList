@@ -11,10 +11,25 @@ import UIKit
 class CheckListViewController: UITableViewController {
     
     var row0Item: CheckListItems
+    var row1Item: CheckListItems
+    var row2Item: CheckListItems
+    var row3Item: CheckListItems
+    var row4Item: CheckListItems
     
     required init?(coder: NSCoder) {
+        
         row0Item = CheckListItems()
+        row1Item = CheckListItems()
+        row2Item = CheckListItems()
+        row3Item = CheckListItems()
+        row4Item = CheckListItems()
+        
         row0Item.text = "Take a jog"
+        row1Item.text = "Take a picture"
+        row2Item.text = "Sleep"
+        row3Item.text = "Make the dinner"
+        row4Item.text = "Do the laundry"
+        
         super.init(coder: coder)
     }
     
@@ -33,10 +48,17 @@ class CheckListViewController: UITableViewController {
         
         if indexPath.row == 0 {
             cell.textLabel?.text = row0Item.text
-        } else {
-            cell.textLabel?.text = "Sleep"
+        } else if indexPath.row == 1 {
+            cell.textLabel?.text = row1Item.text
+        } else if indexPath.row == 2 {
+            cell.textLabel?.text = row2Item.text
+        } else if indexPath.row == 3 {
+            cell.textLabel?.text = row3Item.text
+        } else if indexPath.row == 4 {
+            cell.textLabel?.text = row4Item.text
         }
         
+        configureCheckmark(for: cell, at: indexPath)
         return cell
     }
     
@@ -58,13 +80,39 @@ class CheckListViewController: UITableViewController {
             }
             row0Item.checked = !row0Item.checked
             tableView.deselectRow(at: indexPath, animated: true)
-        } else {
-            if cell.accessoryType == .none {
-                cell.accessoryType = .checkmark
-            } else {
+        } else if indexPath.row == 1 {
+            if row1Item.checked {
                 cell.accessoryType = .none
+            } else {
+                cell.accessoryType = .checkmark
             }
-         }
+            row1Item.checked = !row1Item.checked
+            tableView.deselectRow(at: indexPath, animated: true)
+        } else if indexPath.row == 2 {
+            if row2Item.checked {
+                cell.accessoryType = .none
+            } else {
+                cell.accessoryType = .checkmark
+            }
+            row2Item.checked = !row2Item.checked
+            tableView.deselectRow(at: indexPath, animated: true)
+        } else if indexPath.row == 3 {
+            if row3Item.checked {
+                cell.accessoryType = .none
+            } else {
+                cell.accessoryType = .checkmark
+            }
+            row3Item.checked = !row3Item.checked
+            tableView.deselectRow(at: indexPath, animated: true)
+        } else if indexPath.row == 4 {
+            if row4Item.checked {
+                cell.accessoryType = .none
+            } else {
+                cell.accessoryType = .checkmark
+            }
+            row4Item.checked = !row4Item.checked
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
 
 }
