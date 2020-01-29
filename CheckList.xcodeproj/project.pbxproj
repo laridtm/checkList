@@ -15,6 +15,8 @@
 		1521F79E23DB6DA10078B16F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521F79C23DB6DA10078B16F /* LaunchScreen.storyboard */; };
 		1521F7A923DB6DA10078B16F /* CheckListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521F7A823DB6DA10078B16F /* CheckListTests.swift */; };
 		1521F7B423DB6DA10078B16F /* CheckListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521F7B323DB6DA10078B16F /* CheckListUITests.swift */; };
+		1521F7C223E1FEF60078B16F /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521F7C123E1FEF60078B16F /* TodoList.swift */; };
+		1521F7C423E1FF1E0078B16F /* CheckListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521F7C323E1FF1E0078B16F /* CheckListItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		1521F7AF23DB6DA10078B16F /* CheckListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1521F7B323DB6DA10078B16F /* CheckListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListUITests.swift; sourceTree = "<group>"; };
 		1521F7B523DB6DA10078B16F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1521F7C123E1FEF60078B16F /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
+		1521F7C323E1FF1E0078B16F /* CheckListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				1521F79A23DB6DA10078B16F /* Assets.xcassets */,
 				1521F79C23DB6DA10078B16F /* LaunchScreen.storyboard */,
 				1521F79F23DB6DA10078B16F /* Info.plist */,
+				1521F7C123E1FEF60078B16F /* TodoList.swift */,
+				1521F7C323E1FF1E0078B16F /* CheckListItems.swift */,
 			);
 			path = CheckList;
 			sourceTree = "<group>";
@@ -262,6 +268,8 @@
 				1521F79623DB6D9C0078B16F /* CheckListViewController.swift in Sources */,
 				1521F79223DB6D9C0078B16F /* AppDelegate.swift in Sources */,
 				1521F79423DB6D9C0078B16F /* SceneDelegate.swift in Sources */,
+				1521F7C223E1FEF60078B16F /* TodoList.swift in Sources */,
+				1521F7C423E1FF1E0078B16F /* CheckListItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

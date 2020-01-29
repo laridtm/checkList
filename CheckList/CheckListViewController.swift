@@ -9,14 +9,22 @@
 import UIKit
 
 class CheckListViewController: UITableViewController {
-
+    
+    var row0Item: CheckListItems
+    
+    required init?(coder: NSCoder) {
+        row0Item = CheckListItems()
+        row0Item.text = "Take a jog"
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -24,7 +32,7 @@ class CheckListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
         
         if indexPath.row == 0 {
-            cell.textLabel?.text = "Run"
+            cell.textLabel?.text = row0Item.text
         } else {
             cell.textLabel?.text = "Sleep"
         }
@@ -33,15 +41,24 @@ class CheckListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if let cell = tableView.cellForRow(at: indexPath) {
-            if cell.accessoryType == .none {
-                cell.accessoryType = .checkmark
+            if indexPath.row == 0 {
+                if row0Item.checked {
+                    cell.accessoryType = .none
+                } else {
+                    cell.accessoryType = .checkmark
+                }
+                row0Item.checked = !row0Item.checked
+                tableView.deselectRow(at: indexPath, animated: true)
             } else {
-                cell.accessoryType = .none
+                if cell.accessoryType == .none {
+                    cell.accessoryType = .checkmark
+                } else {
+                    cell.accessoryType = .none
+                }
+                tableView.deselectRow(at: indexPath, animated: true)
             }
         }
-        tableView.deselectRow(at: indexPath, animated: true)
     }
-
 }
-
