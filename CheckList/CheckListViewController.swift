@@ -15,6 +15,7 @@ class CheckListViewController: UITableViewController {
     var row2Item: CheckListItems
     var row3Item: CheckListItems
     var row4Item: CheckListItems
+    var todoList: TodoList
     
     required init?(coder: NSCoder) {
         
@@ -23,6 +24,7 @@ class CheckListViewController: UITableViewController {
         row2Item = CheckListItems()
         row3Item = CheckListItems()
         row4Item = CheckListItems()
+        todoList = TodoList()
         
         row0Item.text = "Take a jog"
         row1Item.text = "Take a picture"
