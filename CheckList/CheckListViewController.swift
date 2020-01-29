@@ -43,22 +43,28 @@ class CheckListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let cell = tableView.cellForRow(at: indexPath) {
-            if indexPath.row == 0 {
-                if row0Item.checked {
-                    cell.accessoryType = .none
-                } else {
-                    cell.accessoryType = .checkmark
-                }
-                row0Item.checked = !row0Item.checked
-                tableView.deselectRow(at: indexPath, animated: true)
-            } else {
-                if cell.accessoryType == .none {
-                    cell.accessoryType = .checkmark
-                } else {
-                    cell.accessoryType = .none
-                }
-                tableView.deselectRow(at: indexPath, animated: true)
-            }
+            configureCheckmark(for: cell, at: indexPath)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
+    
+    func configureCheckmark(for cell: UITableViewCell, at indexPath: IndexPath) {
+        
+        if indexPath.row == 0 {
+            if row0Item.checked {
+                cell.accessoryType = .none
+            } else {
+                cell.accessoryType = .checkmark
+            }
+            row0Item.checked = !row0Item.checked
+            tableView.deselectRow(at: indexPath, animated: true)
+        } else {
+            if cell.accessoryType == .none {
+                cell.accessoryType = .checkmark
+            } else {
+                cell.accessoryType = .none
+            }
+         }
+    }
+
 }
