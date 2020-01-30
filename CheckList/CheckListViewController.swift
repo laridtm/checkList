@@ -60,6 +60,7 @@ class CheckListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         todoList.todos.remove(at: indexPath.row)
+
 //        let indexPath = [indexPath]
 //        tableView.deleteRows(at: indexPath, with: .automatic)
         tableView.deleteRows(at: [indexPath], with: .automatic)
