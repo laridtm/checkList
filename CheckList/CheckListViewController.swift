@@ -31,7 +31,8 @@ class CheckListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
-        cell.textLabel?.text = todoList.todos[indexPath.row].text
+        let item = todoList.todos[indexPath.row]
+        configureText(for: cell, with: item)
         configureCheckmark(for: cell, at: indexPath)
         
         return cell
@@ -43,6 +44,10 @@ class CheckListViewController: UITableViewController {
             configureCheckmark(for: cell, at: indexPath)
             tableView.deselectRow(at: indexPath, animated: true)
         }
+    }
+    
+    func configureText(for cell: UITableViewCell, with item: CheckListItems) {
+        cell.textLabel?.text = item.text
     }
     
     func configureCheckmark(for cell: UITableViewCell, at indexPath: IndexPath) {
