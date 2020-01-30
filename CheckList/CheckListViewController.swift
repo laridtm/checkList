@@ -11,7 +11,13 @@ import UIKit
 class CheckListViewController: UITableViewController {
 
     @IBAction func addItem(_ sender: UIBarButtonItem) {
-        print("added item")
+        let newRoundIndex = todoList.todos.count
+        let item = todoList.newTodo()
+        
+        //nao entendi as tres linhas seguintes
+        let indexPath = IndexPath(row: newRoundIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: [indexPath], with: .automatic)
     }
     
     var todoList: TodoList
