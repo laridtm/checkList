@@ -11,7 +11,7 @@ import Foundation
 class CheckListItems {
     
     var text = ""
-    var checked = false
+    var checked = true
     
     func toggleChecked() {
         checked = !checked
