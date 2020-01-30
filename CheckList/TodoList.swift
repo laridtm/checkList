@@ -33,5 +33,10 @@ class TodoList {
         todos.append(row4Item)
     }
     
-    
+    func newTodo() -> CheckListItems {
+        let item = CheckListItems()
+        item.text = "Buy a dress"
+        todos.append(item)
+        return item
+    }
 }
