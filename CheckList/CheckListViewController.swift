@@ -52,13 +52,11 @@ class CheckListViewController: UITableViewController {
     }
     
     func configureCheckmark(for cell: UITableViewCell, with item: CheckListItems) {
-        let isChecked = item.checked
-        
-        if isChecked {
+        if item.checked {
             cell.accessoryType = .none
         } else {
             cell.accessoryType = .checkmark
         }
-        item.checked = !isChecked
+        item.toggleChecked()
     }
 }
