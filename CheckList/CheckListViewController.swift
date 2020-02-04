@@ -14,7 +14,6 @@ class CheckListViewController: UITableViewController {
         let newRoundIndex = todoList.todos.count
         let item = todoList.newTodo()
         
-        //nao entendi as tres linhas seguintes
         let indexPath = IndexPath(row: newRoundIndex, section: 0)
         let indexPaths = [indexPath]
         tableView.insertRows(at: [indexPath], with: .automatic)
@@ -61,8 +60,6 @@ class CheckListViewController: UITableViewController {
         
         todoList.todos.remove(at: indexPath.row)
 
-//        let indexPath = [indexPath]
-//        tableView.deleteRows(at: indexPath, with: .automatic)
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
     

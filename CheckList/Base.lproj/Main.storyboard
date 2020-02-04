@@ -86,7 +86,7 @@
                                 <action selector="cancel:" destination="Ctu-vY-VRQ" id="FAa-zj-fgX"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="G2H-08-9DX">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Add" id="G2H-08-9DX">
                             <connections>
                                 <action selector="done:" destination="Ctu-vY-VRQ" id="237-2x-e5r"/>
                             </connections>
