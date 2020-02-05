@@ -15,6 +15,9 @@
 		1521F82823EB04870078B16F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521F82623EB04870078B16F /* LaunchScreen.storyboard */; };
 		1521F83323EB04870078B16F /* LearningListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521F83223EB04870078B16F /* LearningListTests.swift */; };
 		1521F83E23EB04870078B16F /* LearningListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521F83D23EB04870078B16F /* LearningListUITests.swift */; };
+		1521F84C23EB06440078B16F /* EngagedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521F84B23EB06440078B16F /* EngagedCell.swift */; };
+		1521F84E23EB07DF0078B16F /* Engageds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521F84D23EB07DF0078B16F /* Engageds.swift */; };
+		1521F85023EB30BB0078B16F /* EveryEngageds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521F84F23EB30BB0078B16F /* EveryEngageds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		1521F83923EB04870078B16F /* LearningListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1521F83D23EB04870078B16F /* LearningListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningListUITests.swift; sourceTree = "<group>"; };
 		1521F83F23EB04870078B16F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1521F84B23EB06440078B16F /* EngagedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngagedCell.swift; sourceTree = "<group>"; };
+		1521F84D23EB07DF0078B16F /* Engageds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engageds.swift; sourceTree = "<group>"; };
+		1521F84F23EB30BB0078B16F /* EveryEngageds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveryEngageds.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				1521F81B23EB04820078B16F /* AppDelegate.swift */,
 				1521F81D23EB04820078B16F /* SceneDelegate.swift */,
 				1521F81F23EB04820078B16F /* ViewController.swift */,
+				1521F84B23EB06440078B16F /* EngagedCell.swift */,
+				1521F84D23EB07DF0078B16F /* Engageds.swift */,
+				1521F84F23EB30BB0078B16F /* EveryEngageds.swift */,
 				1521F82123EB04820078B16F /* Main.storyboard */,
 				1521F82423EB04870078B16F /* Assets.xcassets */,
 				1521F82623EB04870078B16F /* LaunchScreen.storyboard */,
@@ -260,8 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1521F82023EB04820078B16F /* ViewController.swift in Sources */,
+				1521F84E23EB07DF0078B16F /* Engageds.swift in Sources */,
 				1521F81C23EB04820078B16F /* AppDelegate.swift in Sources */,
 				1521F81E23EB04820078B16F /* SceneDelegate.swift in Sources */,
+				1521F84C23EB06440078B16F /* EngagedCell.swift in Sources */,
+				1521F85023EB30BB0078B16F /* EveryEngageds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
