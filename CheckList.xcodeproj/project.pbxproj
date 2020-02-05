@@ -17,6 +17,7 @@
 		1521F7B423DB6DA10078B16F /* CheckListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521F7B323DB6DA10078B16F /* CheckListUITests.swift */; };
 		1521F7C223E1FEF60078B16F /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521F7C123E1FEF60078B16F /* TodoList.swift */; };
 		1521F7C423E1FF1E0078B16F /* CheckListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521F7C323E1FF1E0078B16F /* CheckListItems.swift */; };
+		1521F7C623E33A4D0078B16F /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521F7C523E33A4D0078B16F /* AddItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1521F7B523DB6DA10078B16F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1521F7C123E1FEF60078B16F /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		1521F7C323E1FF1E0078B16F /* CheckListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItems.swift; sourceTree = "<group>"; };
+		1521F7C523E33A4D0078B16F /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				1521F79F23DB6DA10078B16F /* Info.plist */,
 				1521F7C123E1FEF60078B16F /* TodoList.swift */,
 				1521F7C323E1FF1E0078B16F /* CheckListItems.swift */,
+				1521F7C523E33A4D0078B16F /* AddItemViewController.swift */,
 			);
 			path = CheckList;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				1521F79423DB6D9C0078B16F /* SceneDelegate.swift in Sources */,
 				1521F7C223E1FEF60078B16F /* TodoList.swift in Sources */,
 				1521F7C423E1FF1E0078B16F /* CheckListItems.swift in Sources */,
+				1521F7C623E33A4D0078B16F /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

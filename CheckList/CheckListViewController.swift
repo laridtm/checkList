@@ -9,12 +9,22 @@
 import UIKit
 
 class CheckListViewController: UITableViewController {
+
+    @IBAction func addItem(_ sender: UIBarButtonItem) {
+        let newRoundIndex = todoList.todos.count
+        let item = todoList.newTodo()
+        
+        let indexPath = IndexPath(row: newRoundIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: [indexPath], with: .automatic)
+    }
     
-    var row0Item: CheckListItems
+    var todoList: TodoList
     
     required init?(coder: NSCoder) {
-        row0Item = CheckListItems()
-        row0Item.text = "Take a jog"
+    
+        todoList = TodoList()
+        
         super.init(coder: coder)
     }
     
@@ -24,18 +34,15 @@ class CheckListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return todoList.todos.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
-        
-        if indexPath.row == 0 {
-            cell.textLabel?.text = row0Item.text
-        } else {
-            cell.textLabel?.text = "Sleep"
-        }
+        let item = todoList.todos[indexPath.row]
+        configureText(for: cell, with: item)
+        configureCheckmark(for: cell, with: item)
         
         return cell
     }
@@ -43,22 +50,29 @@ class CheckListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let cell = tableView.cellForRow(at: indexPath) {
-            if indexPath.row == 0 {
-                if row0Item.checked {
-                    cell.accessoryType = .none
-                } else {
-                    cell.accessoryType = .checkmark
-                }
-                row0Item.checked = !row0Item.checked
-                tableView.deselectRow(at: indexPath, animated: true)
-            } else {
-                if cell.accessoryType == .none {
-                    cell.accessoryType = .checkmark
-                } else {
-                    cell.accessoryType = .none
-                }
-                tableView.deselectRow(at: indexPath, animated: true)
-            }
+            let item = todoList.todos[indexPath.row]
+            configureCheckmark(for: cell, with: item)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        todoList.todos.remove(at: indexPath.row)
+
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
+    func configureText(for cell: UITableViewCell, with item: CheckListItems) {
+        cell.textLabel?.text = item.text
+    }
+    
+    func configureCheckmark(for cell: UITableViewCell, with item: CheckListItems) {
+        if item.checked {
+            cell.accessoryType = .none
+        } else {
+            cell.accessoryType = .checkmark
+        }
+        item.toggleChecked()
     }
 }
