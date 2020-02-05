@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    
     var engageds: EveryEngageds = EveryEngageds()
     
     override func viewDidLoad() {
@@ -26,11 +24,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return engageds.everyEngageds.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 99
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            
         let couple = engageds.everyEngageds[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EngagedCell", for: indexPath) as! EngagedCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EngagedCell") as! EngagedCell
         
         cell.setEngaged(engaged: couple)
         
