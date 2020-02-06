@@ -9,6 +9,8 @@
 import UIKit
 
 class ShoppingListController: UIViewController {
+    
+    var items: [Item] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,3 +19,5 @@ class ShoppingListController: UIViewController {
     }
 
 }
+
+
