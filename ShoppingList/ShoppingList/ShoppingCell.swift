@@ -12,8 +12,8 @@ class ShoppingCell: UITableViewCell {
 
     @IBOutlet weak var itemFood: UILabel!
     
-//    func setItem(item: item) {
-//        itemFood.text = item
-//    }
+    func setItem(item: Item) {
+        itemFood.text = item.item
+    }
 
 }
