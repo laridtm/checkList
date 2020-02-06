@@ -13,7 +13,7 @@ class ShoppingCell: UITableViewCell {
     @IBOutlet weak var itemFood: UILabel!
     
     func setItem(item: Item) {
-        itemFood.text = item.item
+        itemFood.text = item.name
     }
 
 }

@@ -10,9 +10,6 @@ import Foundation
 
 struct Item {
     
-    let item: String
-    
-    init(item: String) {
-        self.item = item
-    }
+    let name: String
+   
 }
