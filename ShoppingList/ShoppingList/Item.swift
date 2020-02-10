@@ -8,8 +8,17 @@
 
 import Foundation
 
-struct Item {
+class Item {
     
     let name: String
+    var checked = true
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    func toggleChecked() {
+        checked = !checked
+    }
    
 }

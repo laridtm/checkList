@@ -56,5 +56,21 @@ extension ShoppingListController: UITableViewDelegate, UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
     
+    func configureCheckmark(for cell: UITableViewCell, with item: Item) {
+           if item.checked {
+               cell.accessoryType = .none
+           } else {
+               cell.accessoryType = .checkmark
+           }
+           item.toggleChecked()
+       }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        if let cell = tableView.cellForRow(at: indexPath) {
+            let item = items[indexPath.row]
+            configureCheckmark(for: cell, with: item)
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
 }
