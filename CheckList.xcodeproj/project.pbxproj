@@ -109,12 +109,12 @@
 				1521F79323DB6D9C0078B16F /* SceneDelegate.swift */,
 				1521F79523DB6D9C0078B16F /* CheckListViewController.swift */,
 				1521F79723DB6D9C0078B16F /* Main.storyboard */,
-				1521F79A23DB6DA10078B16F /* Assets.xcassets */,
-				1521F79C23DB6DA10078B16F /* LaunchScreen.storyboard */,
-				1521F79F23DB6DA10078B16F /* Info.plist */,
 				1521F7C123E1FEF60078B16F /* TodoList.swift */,
 				1521F7C323E1FF1E0078B16F /* CheckListItems.swift */,
 				1521F7C523E33A4D0078B16F /* AddItemViewController.swift */,
+				1521F79A23DB6DA10078B16F /* Assets.xcassets */,
+				1521F79C23DB6DA10078B16F /* LaunchScreen.storyboard */,
+				1521F79F23DB6DA10078B16F /* Info.plist */,
 			);
 			path = CheckList;
 			sourceTree = "<group>";
