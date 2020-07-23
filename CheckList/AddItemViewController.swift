@@ -10,6 +10,10 @@ import UIKit
 
 class AddItemViewController: UITableViewController {
 
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var addBarButton: UIBarButtonItem!
+    @IBOutlet weak var cancelBarButton: UIBarButtonItem!
+    
     @IBAction func cancel(_ sender: Any) {
         //nao entendi a linha abaixo
         navigationController?.popViewController(animated: true)
@@ -18,10 +22,6 @@ class AddItemViewController: UITableViewController {
     @IBAction func done(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var addBarButton: UIBarButtonItem!
-    @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
